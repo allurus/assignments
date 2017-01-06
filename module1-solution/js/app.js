@@ -14,20 +14,22 @@
         var NumberOfEntries = 0;
         NumberOfEntries = $scope.getNumberofEntries($scope.inputbyuser);
         if(NumberOfEntries ==0){
-          $scope.message="Please enter data first";
-		  $scope.mycolor="red";
+          $scope.mycolor="red";
 		  $scope.myborder="red-border";
+		  $scope.message="Please enter data first";
+		 
         }
         else if ( NumberOfEntries >0 && NumberOfEntries<=3 ){
-          $scope.message="Enjoy!";
-		  $scope.mycolor="green";
+          $scope.mycolor="green";
 		  $scope.myborder="green-border";
+		  $scope.message="Enjoy!";
 		  
         }
         else{
-          $scope.message="Too much!";
-		  $scope.mycolor="green";
+          $scope.mycolor="green";
 		  $scope.myborder="green-border";
+		  $scope.message="Too much!";
+		  
         }
     };
 
