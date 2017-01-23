@@ -1,4 +1,4 @@
-(function () {
+/*(function () {
   'use strict';
 
   angular.module('ShoppingListCheckOff',[])
@@ -74,3 +74,5 @@
   }
 
 })();
+*/
+!function(){"use strict";function e(e){var t=this;t.shoppingList=e.getShoppingListItems(),t.buyItem=function(r){e.itemBought(r),t.errorMessage=e.ErrorMessage1}}function t(e){var t=this;t.items=e.getAlreadyBoughItems(),t.errorMessage=function(){return e.getErrorMessage2()}}function r(){var e=this;e.ErrorMessage2="Nothing bought yet";var t=[{Name:"Cookies",Quantity:10},{Name:"Bananas",Quantity:5},{Name:"Games",Quantity:2},{Name:"Plates",Quantity:50},{Name:"bowls",Quantity:50},{Name:"spoons",Quantity:100}],r=[];e.getShoppingListItems=function(){return t},e.itemBought=function(n){r.push(t[n]),t.splice(n,1),t.length<1?e.ErrorMessage1="Everything is bought!":e.ErrorMessage1="",e.ErrorMessage2=""},e.getAlreadyBoughItems=function(){return r},e.getErrorMessage2=function(){return r.length<1?"Nothing Bought Yet":""}}angular.module("ShoppingListCheckOff",[]).controller("ToBuyController",e).controller("AlreadyBoughtController",t).service("ShoppingListCheckOffService",r),e.$inject=["ShoppingListCheckOffService"],t.$inject=["ShoppingListCheckOffService"]}();
